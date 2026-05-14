@@ -13,7 +13,6 @@
     .product-detail { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .product-image-main { background: var(--cream-dark); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; overflow: hidden; }
     .product-image-main img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
-    .product-image-main .grade-badge { position: absolute; top: 1rem; right: 1rem; width: 42px; height: 42px; font-size: 1rem; }
     .product-info { position: sticky; top: 90px; }
     .product-brand-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-light); margin-bottom: 0.5rem; }
     .product-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: var(--green-deep); margin-bottom: 0.5rem; line-height: 1.1; }
@@ -21,13 +20,15 @@
     .product-price span { font-size: 1rem; font-family: var(--font-body); color: var(--text-light); font-weight: 400; margin-left: 0.5rem; }
     .specs-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
     .specs-table tr { border-bottom: 1px solid var(--cream-dark); }
-    .specs-table td:first-child { color: var(--text-light); padding: 0.6rem 0; width: 45%; font-size: 0.8rem; letter-spacing: 0.04em; }
+    .specs-table td:first-child { color: var(--text-light); padding: 0.6rem 0; width: 45%; font-size: 0.8rem; }
     .specs-table td:last-child { color: var(--text-dark); font-weight: 500; padding: 0.6rem 0; }
     .cta-group { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.75rem; }
     .cta-group .btn { justify-content: center; padding: 1rem; font-size: 0.9rem; }
     .condition-note { margin-top: 1.25rem; padding: 1rem 1.25rem; background: var(--cream); border-radius: var(--radius); font-size: 0.825rem; color: var(--text-mid); border-left: 3px solid var(--gold); }
     .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2rem; transition: color var(--transition); }
     .back-link:hover { color: var(--green-light); }
+    .digital-image { background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%) !important; }
+    .grade-badge-product { position: absolute; top: 1rem; right: 1rem; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; }
     @media (max-width: 768px) { .product-detail { grid-template-columns: 1fr; gap: 2rem; } .product-info { position: static; } }
   </style>
 </head>
@@ -43,11 +44,11 @@
       </a>
       <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html" class="nav-link" data-de="Shop" data-en="Shop">Shop</a></li>
-          <li><a href="about.html" class="nav-link" data-de="Über uns" data-en="About us">Über uns</a></li>
-          <li><a href="license.html" class="nav-link" data-de="Lizenz & AGB" data-en="License & T&C">Lizenz & AGB</a></li>
-          <li><a href="privacy.html" class="nav-link" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
-          <li><a href="contact.html" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+          <li><a href="index.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">Über uns</a></li>
+          <li><a href="license.html" class="nav-link">Lizenz & AGB</a></li>
+          <li><a href="privacy.html" class="nav-link">Datenschutz</a></li>
+          <li><a href="contact.html" class="nav-link">Kontakt</a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -58,69 +59,9 @@
 
   <main id="main-content">
     <div style="max-width:1100px;margin:0 auto;padding:2rem 2rem 0;">
-      <a href="index.html" class="back-link" aria-label="Zurück zum Shop">← <span data-de="Zurück zum Shop" data-en="Back to shop">Zurück zum Shop</span></a>
+      <a href="index.html" class="back-link">← Zurück zum Shop</a>
     </div>
-
-    <div class="product-detail">
-
-      <!-- IMAGE -->
-      <div>
-        <div class="product-image-main" role="img" aria-label="TaylorMade P790 Eisensatz – Produktfoto">
-          <img src="assets/images/p790.jpg" alt="TaylorMade P790 Eisensatz, 5-PW, gebrauchter Zustand A-Grade, KBS Tour 90 Schaft Regular" onerror="this.style.display='none'" />
-          <span style="position:absolute;font-size:4rem;opacity:0.3;" aria-hidden="true">⛳</span>
-          <span class="grade-badge grade-a" aria-label="Zustand A-Grade">A</span>
-        </div>
-        <div class="info-box" style="margin-top:1rem;">
-          <p style="font-size:0.8rem;" data-de="Foto: Unsplash-Lizenz (kostenlos, kommerzielle Nutzung erlaubt). Quelle: unsplash.com" data-en="Photo: Unsplash licence (free, commercial use permitted). Source: unsplash.com">
-            Foto: Unsplash-Lizenz · kostenlose kommerzielle Nutzung · unsplash.com
-          </p>
-        </div>
-      </div>
-
-      <!-- INFO -->
-      <div class="product-info">
-        <p class="product-brand-label">TaylorMade</p>
-        <h1 class="product-title">P790 Eisensatz</h1>
-
-        <div class="product-price">
-          € 649 <span data-de="inkl. MwSt." data-en="incl. VAT">inkl. MwSt.</span>
-        </div>
-
-        <table class="specs-table" aria-label="Produktspezifikationen">
-          <tbody>
-            <tr><td data-de="Schläger" data-en="Clubs">Schläger</td><td>5 – PW (6 Stück)</td></tr>
-            <tr><td data-de="Schaft" data-en="Shaft">Schaft</td><td>KBS Tour 90</td></tr>
-            <tr><td data-de="Flex" data-en="Flex">Flex</td><td>Regular</td></tr>
-            <tr><td data-de="Länge" data-en="Length">Länge</td><td>Standard</td></tr>
-            <tr><td data-de="Griff" data-en="Grip">Griff</td><td>Golf Pride Tour Velvet (neu)</td></tr>
-            <tr><td data-de="Jahrgang" data-en="Year">Jahrgang</td><td>2021</td></tr>
-            <tr><td data-de="Zustand" data-en="Condition">Zustand</td><td><strong data-de="A-Grade – wie neu" data-en="A-Grade – like new">A-Grade – wie neu</strong></td></tr>
-            <tr><td data-de="Versand" data-en="Shipping">Versand</td><td data-de="Österreich & EU" data-en="Austria & EU">Österreich & EU</td></tr>
-          </tbody>
-        </table>
-
-        <div class="condition-note" role="note">
-          <strong data-de="A-Grade:" data-en="A-Grade:">A-Grade:</strong>
-          <span data-de=" Maximal 1–2 Runden gespielt. Keine sichtbaren Gebrauchsspuren am Face oder Schaft. Griffe wurden erneuert." data-en=" Maximum 1–2 rounds played. No visible marks on face or shaft. Grips have been replaced.">
-            Maximal 1–2 Runden gespielt. Keine sichtbaren Gebrauchsspuren. Griffe erneuert.
-          </span>
-        </div>
-
-        <div class="cta-group">
-          <a href="contact.html" class="btn btn-primary" data-de="Jetzt kaufen – Anfrage senden" data-en="Buy now – send enquiry">
-            Jetzt kaufen – Anfrage senden
-          </a>
-          <a href="index.html" class="btn btn-ghost" data-de="Weitere Angebote ansehen" data-en="View more listings">
-            Weitere Angebote ansehen
-          </a>
-        </div>
-
-        <p style="font-size:0.775rem;color:var(--text-light);margin-top:1rem;line-height:1.6;" data-de="Differenzbesteuerung gem. § 24 UStG – kein gesonderter Umsatzsteuerausweis möglich. 14 Tage Rückgaberecht gem. § 11 FAGG." data-en="Margin scheme per § 24 UStG – no separate VAT breakdown possible. 14-day right of return pursuant to § 11 FAGG.">
-          Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG.
-        </p>
-      </div>
-
-    </div>
+    <div class="product-detail" id="productDetail"></div>
   </main>
 
   <footer class="site-footer" role="contentinfo">
@@ -132,11 +73,11 @@
       </div>
       <nav class="footer-nav" aria-label="Footer-Navigation">
         <ul>
-          <li><a href="about.html" data-de="Über uns" data-en="About us">Über uns</a></li>
-          <li><a href="license.html" data-de="AGB & Lizenz" data-en="T&C & License">AGB & Lizenz</a></li>
-          <li><a href="privacy.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
-          <li><a href="accessibility.html" data-de="Barrierefreiheit" data-en="Accessibility">Barrierefreiheit</a></li>
-          <li><a href="contact.html" data-de="Impressum & Kontakt" data-en="Imprint & Contact">Impressum & Kontakt</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="license.html">AGB & Lizenz</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="accessibility.html">Barrierefreiheit</a></li>
+          <li><a href="contact.html">Impressum & Kontakt</a></li>
         </ul>
       </nav>
       <div class="footer-legal">
@@ -146,5 +87,104 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    const PRODUCTS = {
+      1: {
+        brand: "TaylorMade", title: "P790 Eisensatz", price: "649",
+        grade: "A", gradeClass: "grade-a", digital: false,
+        image: "assets/images/p790.jpg",
+        imageAlt: "TaylorMade P790 Eisensatz, 5-PW, A-Grade Zustand",
+        specs: [["Schläger","5–PW (6 Stück)"],["Schaft","KBS Tour 90"],["Flex","Regular"],["Länge","Standard"],["Griff","Golf Pride Tour Velvet (neu)"],["Jahrgang","2021"],["Zustand","<strong>A-Grade – wie neu</strong>"],["Versand","Österreich & EU"]],
+        note: "<strong>A-Grade:</strong> Maximal 1–2 Runden gespielt. Keine sichtbaren Gebrauchsspuren. Griffe erneuert.",
+        vat: "Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG."
+      },
+      2: {
+        brand: "Mizuno", title: "MP-20 Eisensatz", price: "489",
+        grade: "B", gradeClass: "grade-b", digital: false,
+        image: "assets/images/mp20.jpg",
+        imageAlt: "Mizuno MP-20 Eisensatz, 4-PW, B-Grade Zustand",
+        specs: [["Schläger","4–PW (7 Stück)"],["Schaft","Dynamic Gold S300"],["Flex","Stiff"],["Länge","Standard"],["Griff","Golf Pride Original"],["Jahrgang","2020"],["Zustand","<strong>B-Grade – normaler Gebrauch</strong>"],["Versand","Österreich & EU"]],
+        note: "<strong>B-Grade:</strong> Normaler Gebrauch, keine Kratzer am Face. Voll spielbereit.",
+        vat: "Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG."
+      },
+      3: {
+        brand: "Titleist", title: "T100 Eisensatz", price: "719",
+        grade: "A", gradeClass: "grade-a", digital: false,
+        image: "assets/images/t100.jpg",
+        imageAlt: "Titleist T100 Eisensatz, 4-PW, A-Grade Zustand",
+        specs: [["Schläger","4–PW (7 Stück)"],["Schaft","Project X 6.0"],["Flex","Stiff"],["Länge","Standard"],["Griff","Golf Pride MCC (neu)"],["Jahrgang","2022"],["Zustand","<strong>A-Grade – wie neu</strong>"],["Versand","Österreich & EU"]],
+        note: "<strong>A-Grade:</strong> Maximal 1–2 Runden gespielt. Keinerlei Gebrauchsspuren. Griffe neu.",
+        vat: "Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG."
+      },
+      4: {
+        brand: "TaylorMade", title: "SIM2 Driver", price: "229",
+        grade: "B", gradeClass: "grade-b", digital: false,
+        image: "assets/images/sim2.jpg",
+        imageAlt: "TaylorMade SIM2 Driver, 9 Grad, B-Grade Zustand",
+        specs: [["Loft","9°"],["Schaft","Mitsubishi Tensei AV"],["Flex","Regular"],["Länge","Standard (45.75\")"],["Griff","Golf Pride Tour Velvet 360"],["Jahrgang","2021"],["Zustand","<strong>B-Grade – normaler Gebrauch</strong>"],["Versand","Österreich & EU"]],
+        note: "<strong>B-Grade:</strong> Normale Crown-Spuren, Face in sehr gutem Zustand.",
+        vat: "Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG."
+      },
+      5: {
+        brand: "Callaway", title: "Apex Eisensatz", price: "579",
+        grade: "A", gradeClass: "grade-a", digital: false,
+        image: "assets/images/apex.jpg",
+        imageAlt: "Callaway Apex Eisensatz, 5-PW, A-Grade Zustand",
+        specs: [["Schläger","5–PW (6 Stück)"],["Schaft","True Temper"],["Flex","Regular"],["Länge","Standard"],["Griff","Callaway Golf Pride (original)"],["Jahrgang","2022"],["Zustand","<strong>A-Grade – wie neu</strong>"],["Versand","Österreich & EU"]],
+        note: "<strong>A-Grade:</strong> Kaum gespielt, nahezu neuwertig. Minimale Lagerspuren an Sohle.",
+        vat: "Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG."
+      },
+      6: {
+        brand: "Digitales Produkt", title: "SwingAnalysis Report", price: "29",
+        grade: "PDF", gradeClass: "grade-digital", digital: true,
+        image: null,
+        imageAlt: "SwingAnalysis Report – Personalisiertes PDF-Dokument",
+        specs: [["Produkttyp","Digitales PDF-Dokument"],["Lieferung","Per E-Mail (innerhalb 48h)"],["Umfang","8–12 Seiten"],["Inhalt","Schaft-Empfehlung, Flex, Loft/Lie-Analyse"],["Sprache","Deutsch / Englisch"],["Lizenz","Persönliche Nutzung (nicht übertragbar)"],["Rückgabe","Kein Widerrufsrecht (§ 18 FAGG)"]],
+        note: "<strong>So funktioniert's:</strong> Nach dem Kauf erhältst du einen Fragebogen zu Handicap, Schwung und aktuellen Schlägern. Innerhalb 48h liefern wir deinen personalisierten Report per E-Mail.",
+        vat: "Digitales Produkt – kein Widerrufsrecht nach Beginn der Ausführung (§ 18 Abs. 1 Z 11 FAGG)."
+      }
+    };
+
+    (function () {
+      const id = parseInt(new URLSearchParams(window.location.search).get('id')) || 1;
+      const p = PRODUCTS[id] || PRODUCTS[1];
+
+      document.title = p.title + ' – FairwayVault';
+
+      const gradeColors = { 'grade-a': '#3d6b47', 'grade-b': '#c9a84c', 'grade-c': '#595959', 'grade-digital': '#c9a84c' };
+      const gradeTextColors = { 'grade-a': '#fff', 'grade-b': '#1a2e1e', 'grade-c': '#fff', 'grade-digital': '#1a2e1e' };
+      const bg = gradeColors[p.gradeClass];
+      const fg = gradeTextColors[p.gradeClass];
+
+      const imageBlock = p.digital
+        ? `<div class="product-image-main digital-image" role="img" aria-label="${p.imageAlt}">
+             <span style="font-size:5rem;" aria-hidden="true">📊</span>
+             <span class="grade-badge-product" style="background:${bg};color:${fg};font-size:0.65rem;letter-spacing:0.05em;" aria-label="Digitales Produkt">${p.grade}</span>
+           </div>`
+        : `<div class="product-image-main" role="img" aria-label="${p.imageAlt}">
+             <img src="${p.image}" alt="${p.imageAlt}" onerror="this.style.display='none'" />
+             <span style="position:absolute;font-size:4rem;opacity:0.3;" aria-hidden="true">⛳</span>
+             <span class="grade-badge-product" style="background:${bg};color:${fg};" aria-label="Zustand ${p.grade}-Grade">${p.grade}</span>
+           </div>
+           <div class="info-box" style="margin-top:1rem;"><p style="font-size:0.8rem;">Foto: Unsplash-Lizenz · kostenlose kommerzielle Nutzung · unsplash.com</p></div>`;
+
+      const specsRows = p.specs.map(([l, v]) => `<tr><td>${l}</td><td>${v}</td></tr>`).join('');
+
+      document.getElementById('productDetail').innerHTML = `
+        <div>${imageBlock}</div>
+        <div class="product-info">
+          <p class="product-brand-label">${p.brand}</p>
+          <h1 class="product-title">${p.title}</h1>
+          <div class="product-price">€ ${p.price} <span>inkl. MwSt.</span></div>
+          <table class="specs-table" aria-label="Produktspezifikationen"><tbody>${specsRows}</tbody></table>
+          <div class="condition-note" role="note">${p.note}</div>
+          <div class="cta-group">
+            <a href="contact.html" class="btn btn-primary">Jetzt kaufen – Anfrage senden</a>
+            <a href="index.html" class="btn btn-ghost">Weitere Angebote ansehen</a>
+          </div>
+          <p style="font-size:0.775rem;color:var(--text-light);margin-top:1rem;line-height:1.6;">${p.vat}</p>
+        </div>`;
+    })();
+  </script>
 </body>
 </html>
