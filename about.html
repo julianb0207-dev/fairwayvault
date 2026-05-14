@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Über FairwayVault – unsere Marke, unsere Geschichte, unser Team." />
+  <title>Über uns – FairwayVault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .brand-section { padding: 5rem 2rem; background: var(--white); }
+    .brand-inner { max-width: 1100px; margin: 0 auto; }
+    .brand-intro { max-width: 680px; margin: 0 auto 5rem; text-align: center; }
+    .brand-intro h2 { font-family: var(--font-display); font-size: clamp(1.75rem,4vw,2.75rem); color: var(--green-deep); margin-bottom: 1rem; }
+    .brand-intro p { color: var(--text-mid); line-height: 1.8; }
+
+    /* Brand Marks */
+    .brand-marks { display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem; margin-bottom: 5rem; }
+    .brand-card { background: var(--cream); border-radius: var(--radius-lg); padding: 2.5rem 2rem; text-align: center; border: 1px solid var(--cream-dark); }
+    .brand-card .brand-mark-display { margin: 0 auto 1.5rem; }
+    .brand-card h3 { font-family: var(--font-display); font-size: 1.375rem; color: var(--green-deep); margin-bottom: 0.5rem; }
+    .brand-card .brand-type { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .brand-card p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.7; }
+    .brand-card .nizza { margin-top: 1rem; font-size: 0.75rem; color: var(--text-light); background: var(--cream-dark); padding: 0.4rem 0.75rem; border-radius: 20px; display: inline-block; }
+
+    /* Wortmarke */
+    .wortmarke-display {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--green-deep);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--green-deep);
+      display: inline-block;
+    }
+    /* Bildmarke */
+    .bildmarke-display svg { display: block; margin: 0 auto; }
+    /* Wort-Bildmarke */
+    .wortbildmarke-display {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--green-deep);
+      color: var(--cream);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius);
+    }
+    .wortbildmarke-display .fv-box {
+      width: 36px; height: 36px;
+      background: var(--gold);
+      color: var(--green-deep);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 2px;
+    }
+    .wortbildmarke-display span:last-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+    }
+
+    /* Team */
+    .team-section { background: var(--green-deep); padding: 5rem 2rem; }
+    .team-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .team-inner h2 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); color: var(--cream); margin-bottom: 3rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+    .team-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg); padding: 2rem; text-align: left; }
+    .team-avatar { width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; color: var(--green-deep); margin-bottom: 1rem; }
+    .team-card h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--cream); margin-bottom: 0.25rem; }
+    .team-card .role { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .team-card p { font-size: 0.85rem; color: rgba(245,240,232,0.6); line-height: 1.7; }
+
+    /* Nizza Table */
+    .nizza-section { padding: 5rem 2rem; background: var(--cream); }
+    .nizza-inner { max-width: 900px; margin: 0 auto; }
+    .nizza-inner h2 { font-family: var(--font-display); font-size: 2.25rem; color: var(--green-deep); margin-bottom: 0.5rem; }
+    .nizza-inner > p { color: var(--text-mid); margin-bottom: 2.5rem; }
+    .nizza-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .nizza-table th { background: var(--green-deep); color: var(--cream); padding: 0.875rem 1rem; text-align: left; font-weight: 500; letter-spacing: 0.06em; font-size: 0.75rem; text-transform: uppercase; }
+    .nizza-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--cream-dark); color: var(--text-mid); vertical-align: top; }
+    .nizza-table tr:hover td { background: var(--white); }
+    .nizza-class { font-weight: 600; color: var(--green-deep); white-space: nowrap; }
+
+    @media (max-width: 768px) {
+      .brand-marks { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-de="Zum Inhalt springen" data-en="Skip to content">Zum Inhalt springen</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="FairwayVault Startseite">
+        <span class="logo-mark">FV</span>
+        <span class="logo-text">FairwayVault</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html" class="nav-link" data-de="Shop" data-en="Shop">Shop</a></li>
+          <li><a href="about.html" class="nav-link active" data-de="Über uns" data-en="About us">Über uns</a></li>
+          <li><a href="license.html" class="nav-link" data-de="Lizenz & AGB" data-en="License & T&C">Lizenz & AGB</a></li>
+          <li><a href="privacy.html" class="nav-link" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+          <li><a href="contact.html" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span id="langLabel">EN</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <h1 data-de="Über FairwayVault" data-en="About FairwayVault">Über FairwayVault</h1>
+      <p data-de="Leidenschaft für Golf. Expertise in Equipment. Vertrauen durch Transparenz." data-en="Passion for golf. Expertise in equipment. Trust through transparency.">
+        Leidenschaft für Golf. Expertise in Equipment. Vertrauen durch Transparenz.
+      </p>
+    </div>
+
+    <!-- STORY -->
+    <section class="brand-section">
+      <div class="brand-inner">
+        <div class="brand-intro">
+          <h2 data-de="Unsere Geschichte" data-en="Our Story">Unsere Geschichte</h2>
+          <p data-de="FairwayVault entstand aus einer einfachen Beobachtung: Hochwertige Schläger werden nach wenigen Runden weiterverkauft – oft weit unter ihrem tatsächlichen Wert. Wir kaufen diese Schläger auf, prüfen sie sorgfältig und geben sie an Golfer weiter, die Premium-Equipment ohne Neupreis suchen." data-en="FairwayVault was born from a simple observation: premium clubs get resold after just a few rounds – often far below their true value. We source these clubs, inspect them carefully, and pass them on to golfers who want premium equipment without the new price.">
+            FairwayVault entstand aus einer einfachen Beobachtung: Hochwertige Schläger werden nach wenigen Runden weiterverkauft – oft weit unter ihrem tatsächlichen Wert. Wir kaufen diese Schläger auf, prüfen sie sorgfältig und geben sie an Golfer weiter, die Premium-Equipment ohne Neupreis suchen.
+          </p>
+        </div>
+
+        <!-- MARKEN (Aufgabe 3) -->
+        <div class="brand-marks">
+
+          <!-- Marke 1: Wortmarke -->
+          <div class="brand-card">
+            <div class="brand-mark-display">
+              <div class="wortmarke-display">FairwayVault</div>
+            </div>
+            <p class="brand-type" data-de="Wortmarke" data-en="Word Mark">Wortmarke</p>
+            <h3 data-de="Der Name" data-en="The Name">Der Name</h3>
+            <p data-de='"Fairway" steht für den gepflegten Spielbereich – Qualität und Präzision. "Vault" (Tresor) symbolisiert die sichere Aufbewahrung und den Wert, den wir in jedem Schläger sehen.' data-en='"Fairway" represents the carefully maintained playing surface – quality and precision. "Vault" symbolises the secure storage and the value we see in every club.'>
+              „Fairway" steht für den gepflegten Spielbereich – Qualität und Präzision. „Vault" (Tresor) symbolisiert den Wert, den wir in jedem Schläger sehen.
+            </p>
+            <span class="nizza" data-de="Nizza-Klasse 35 & 40" data-en="Nice Class 35 & 40">Nizza-Klasse 35 & 40</span>
+          </div>
+
+          <!-- Marke 2: Bildmarke -->
+          <div class="brand-card">
+            <div class="brand-mark-display bildmarke-display">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FairwayVault Bildmarke – F und V als geometrisches Monogramm">
+                <rect width="80" height="80" rx="4" fill="#1a2e1e"/>
+                <!-- FV Monogram -->
+                <text x="40" y="55" font-family="Cormorant Garamond, Georgia, serif" font-size="38" font-weight="600" fill="#c9a84c" text-anchor="middle" letter-spacing="-2">FV</text>
+                <!-- Gold bottom line -->
+                <rect x="16" y="64" width="48" height="2" fill="#c9a84c" rx="1"/>
+              </svg>
+            </div>
+            <p class="brand-type" data-de="Bildmarke / Logomarke" data-en="Logo Mark">Bildmarke / Logomarke</p>
+            <h3 data-de="Das Monogramm" data-en="The Monogram">Das Monogramm</h3>
+            <p data-de="Das FV-Monogramm auf dunkelgrünem Grund mit goldenem Unterstrich. Dunkelgrün steht für den Golfrasen und Seriosität, Gold für Premium-Qualität. Einsetzbar als App-Icon, Favicon oder Stempel." data-en="The FV monogram on deep green background with gold underline. Dark green stands for the fairway and trustworthiness, gold for premium quality. Suitable as app icon, favicon, or stamp.">
+              Das FV-Monogramm auf dunkelgrünem Grund mit goldenem Unterstrich. Dunkelgrün steht für Seriosität, Gold für Premium-Qualität.
+            </p>
+            <span class="nizza" data-de="Nizza-Klasse 35 & 40" data-en="Nice Class 35 & 40">Nizza-Klasse 35 & 40</span>
+          </div>
+
+          <!-- Marke 3: Kombinationsmarke (Wort + Bild, eigenständige dritte Form) -->
+          <div class="brand-card">
+            <div class="brand-mark-display">
+              <div class="wortbildmarke-display" role="img" aria-label="FairwayVault Kombinationsmarke – goldenes FV-Symbol mit Schriftzug">
+                <div class="fv-box">FV</div>
+                <span>FairwayVault</span>
+              </div>
+            </div>
+            <p class="brand-type" data-de="Kombinationsmarke" data-en="Combined Mark">Kombinationsmarke</p>
+            <h3 data-de="Symbol + Name" data-en="Symbol + Name">Symbol + Name</h3>
+            <p data-de="Die Kombinationsmarke verbindet Bildmarke und Wortmarke zu einem einheitlichen Erscheinungsbild für Website-Header, Verpackungen und Versandmaterial." data-en="The combined mark unites the logo and word mark into a cohesive identity for website headers, packaging, and shipping materials.">
+              Die Kombinationsmarke verbindet Bild- und Wortmarke für Website-Header, Verpackungen und Versandmaterial.
+            </p>
+            <span class="nizza" data-de="Nizza-Klasse 35 & 40" data-en="Nice Class 35 & 40">Nizza-Klasse 35 & 40</span>
+          </div>
+
+        </div><!-- /.brand-marks -->
+
+        <!-- MEDIA LICENSE TABLE (Aufgabe 2) -->
+        <div style="margin-top:1rem;">
+          <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--green-deep);margin-bottom:0.5rem;" data-de="Verwendete Medien & Lizenzen" data-en="Media Used & Licences">Verwendete Medien & Lizenzen</h2>
+          <p style="color:var(--text-mid);margin-bottom:1.5rem;font-size:0.9rem;" data-de="Alle auf dieser Website verwendeten Medien sind lizenzrechtlich geprüft." data-en="All media used on this website have been checked for licensing compliance.">Alle auf dieser Website verwendeten Medien sind lizenzrechtlich geprüft.</p>
+          <div style="overflow-x:auto;">
+            <table class="nizza-table" aria-label="Medien und Lizenzen">
+              <thead>
+                <tr>
+                  <th data-de="Medium" data-en="Media">Medium</th>
+                  <th data-de="Typ" data-en="Type">Typ</th>
+                  <th data-de="Quelle" data-en="Source">Quelle</th>
+                  <th data-de="Lizenz" data-en="Licence">Lizenz</th>
+                  <th data-de="Verwendung" data-en="Usage">Verwendung</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Cormorant Garamond</td><td>Schriftart</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td><td>Headlines, Logos</td></tr>
+                <tr><td>DM Sans</td><td>Schriftart</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td><td>Fließtext, Navigation</td></tr>
+                <tr><td>Produktfotos Golf</td><td>Foto</td><td>Unsplash (unsplash.com)</td><td>Unsplash License (CC0-ähnlich)</td><td>Produktkarten</td></tr>
+                <tr><td>FV-Monogramm SVG</td><td>Grafik</td><td>Eigene Erstellung</td><td>Eigentum FairwayVault</td><td>Logo, Favicon</td></tr>
+                <tr><td>Golfplatz Hero-Foto</td><td>Foto</td><td>Pexels (pexels.com)</td><td>Pexels License (kostenlos, kommerziell)</td><td>Hero-Bereich</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="team-inner">
+        <h2 id="team-heading" data-de="Unser Team" data-en="Our Team">Unser Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar" aria-hidden="true">JB</div>
+            <h3>Julian Binderberger</h3>
+            <p class="role" data-de="Gründer & Golf Equipment Experte" data-en="Founder & Golf Equipment Expert">Gründer & Golf Equipment Experte</p>
+            <p data-de="Über 10 Jahre Golferfahrung, spezialisiert auf Tour Issue Equipment, Schaft-Fitting und Loft/Lie-Anpassungen. Betreibt das Unternehmen als österreichisches Einzelunternehmen." data-en="Over 10 years of golf experience, specialising in tour issue equipment, shaft fitting, and loft/lie adjustments. Operates the business as an Austrian sole trader.">
+              Über 10 Jahre Golferfahrung, spezialisiert auf Tour Issue Equipment, Schaft-Fitting und Loft/Lie-Anpassungen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NIZZA KLASSEN -->
+    <section class="nizza-section" aria-labelledby="nizza-heading">
+      <div class="nizza-inner">
+        <h2 id="nizza-heading" data-de="Marken & Nizza-Klassifikation" data-en="Trade Marks & Nice Classification">Marken & Nizza-Klassifikation</h2>
+        <p data-de="Unsere Marken wurden den entsprechenden Nizza-Klassen zugeordnet und auf Konflikte mit bestehenden Marken im EUIPO-Register geprüft." data-en="Our trade marks have been assigned to the relevant Nice classes and checked for conflicts with existing marks in the EUIPO register.">
+          Unsere Marken wurden den entsprechenden Nizza-Klassen zugeordnet und auf Konflikte im EUIPO-Register geprüft.
+        </p>
+        <table class="nizza-table" aria-label="Nizza-Klassifikation unserer Marken">
+          <thead>
+            <tr>
+              <th data-de="Nizza-Klasse" data-en="Nice Class">Nizza-Klasse</th>
+              <th data-de="Beschreibung" data-en="Description">Beschreibung</th>
+              <th data-de="Relevanz" data-en="Relevance">Relevanz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nizza-class">Klasse 28</td>
+              <td data-de="Sportgeräte und -artikel; Golfschläger, Golfbälle, Golftaschen" data-en="Sports equipment and articles; golf clubs, golf balls, golf bags">Sportgeräte; Golfschläger, Golfbälle, Golftaschen</td>
+              <td data-de="Kerngeschäft: Handel mit gebrauchtem Golf-Equipment" data-en="Core business: trade in used golf equipment">Kerngeschäft: Handel mit Golf-Equipment</td>
+            </tr>
+            <tr>
+              <td class="nizza-class">Klasse 35</td>
+              <td data-de="Einzelhandelsdienstleistungen; Online-Handel mit Sportartikeln" data-en="Retail services; online retail of sports goods">Einzelhandel; Online-Handel mit Sportartikeln</td>
+              <td data-de="Betrieb des Webshops und Online-Marktplatzes" data-en="Operation of webshop and online marketplace">Betrieb des Webshops</td>
+            </tr>
+            <tr>
+              <td class="nizza-class">Klasse 41</td>
+              <td data-de="Sportliche Aktivitäten; Coaching und Beratung im Golfsport" data-en="Sporting activities; coaching and consultancy in golf">Sportliche Aktivitäten; Golf-Coaching und Beratung</td>
+              <td data-de="SwingAnalysis Report / Fitting-Beratung" data-en="SwingAnalysis Report / fitting consultancy">SwingAnalysis Report / Fitting-Beratung</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info-box" style="margin-top:2rem;">
+          <p data-de="Markenrecherche durchgeführt via EUIPO eSearch Plus und TMview. Zum Zeitpunkt der Erstellung wurden keine konfligierenden Marken für den Namen „FairwayVault" in den relevanten Klassen gefunden." data-en="Trade mark research conducted via EUIPO eSearch Plus and TMview. At the time of creation, no conflicting marks were found for the name 'FairwayVault' in the relevant classes.">
+            Markenrecherche durchgeführt via EUIPO eSearch Plus und TMview. Keine konfligierenden Marken für „FairwayVault" in den relevanten Klassen gefunden.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">FV</span>
+        <p>Premium Used Golf Equipment</p>
+        <p class="footer-copy">© 2025 FairwayVault – Julian Binderberger e.U.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer-Navigation">
+        <ul>
+          <li><a href="about.html" data-de="Über uns" data-en="About us">Über uns</a></li>
+          <li><a href="license.html" data-de="AGB & Lizenz" data-en="T&C & License">AGB & Lizenz</a></li>
+          <li><a href="privacy.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+          <li><a href="accessibility.html" data-de="Barrierefreiheit" data-en="Accessibility">Barrierefreiheit</a></li>
+          <li><a href="contact.html" data-de="Impressum & Kontakt" data-en="Imprint & Contact">Impressum & Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-legal">
+        <p data-de="Alle Preise inkl. MwSt. zzgl. Versand." data-en="All prices incl. VAT plus shipping.">Alle Preise inkl. MwSt. zzgl. Versand.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
