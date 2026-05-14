@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Produktdetails – FairwayVault Premium Used Golf Equipment." />
+  <title>Produkt – FairwayVault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-detail { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .product-image-main { background: var(--cream-dark); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; overflow: hidden; }
+    .product-image-main img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
+    .product-image-main .grade-badge { position: absolute; top: 1rem; right: 1rem; width: 42px; height: 42px; font-size: 1rem; }
+    .product-info { position: sticky; top: 90px; }
+    .product-brand-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-light); margin-bottom: 0.5rem; }
+    .product-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: var(--green-deep); margin-bottom: 0.5rem; line-height: 1.1; }
+    .product-price { font-family: var(--font-display); font-size: 2.25rem; font-weight: 600; color: var(--green-deep); margin: 1.25rem 0; }
+    .product-price span { font-size: 1rem; font-family: var(--font-body); color: var(--text-light); font-weight: 400; margin-left: 0.5rem; }
+    .specs-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+    .specs-table tr { border-bottom: 1px solid var(--cream-dark); }
+    .specs-table td:first-child { color: var(--text-light); padding: 0.6rem 0; width: 45%; font-size: 0.8rem; letter-spacing: 0.04em; }
+    .specs-table td:last-child { color: var(--text-dark); font-weight: 500; padding: 0.6rem 0; }
+    .cta-group { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.75rem; }
+    .cta-group .btn { justify-content: center; padding: 1rem; font-size: 0.9rem; }
+    .condition-note { margin-top: 1.25rem; padding: 1rem 1.25rem; background: var(--cream); border-radius: var(--radius); font-size: 0.825rem; color: var(--text-mid); border-left: 3px solid var(--gold); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2rem; transition: color var(--transition); }
+    .back-link:hover { color: var(--green-light); }
+    @media (max-width: 768px) { .product-detail { grid-template-columns: 1fr; gap: 2rem; } .product-info { position: static; } }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="FairwayVault Startseite">
+        <span class="logo-mark">FV</span>
+        <span class="logo-text">FairwayVault</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html" class="nav-link" data-de="Shop" data-en="Shop">Shop</a></li>
+          <li><a href="about.html" class="nav-link" data-de="Über uns" data-en="About us">Über uns</a></li>
+          <li><a href="license.html" class="nav-link" data-de="Lizenz & AGB" data-en="License & T&C">Lizenz & AGB</a></li>
+          <li><a href="privacy.html" class="nav-link" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+          <li><a href="contact.html" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln"><span id="langLabel">EN</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div style="max-width:1100px;margin:0 auto;padding:2rem 2rem 0;">
+      <a href="index.html" class="back-link" aria-label="Zurück zum Shop">← <span data-de="Zurück zum Shop" data-en="Back to shop">Zurück zum Shop</span></a>
+    </div>
+
+    <div class="product-detail">
+
+      <!-- IMAGE -->
+      <div>
+        <div class="product-image-main" role="img" aria-label="TaylorMade P790 Eisensatz – Produktfoto">
+          <img src="assets/images/p790.jpg" alt="TaylorMade P790 Eisensatz, 5-PW, gebrauchter Zustand A-Grade, KBS Tour 90 Schaft Regular" onerror="this.style.display='none'" />
+          <span style="position:absolute;font-size:4rem;opacity:0.3;" aria-hidden="true">⛳</span>
+          <span class="grade-badge grade-a" aria-label="Zustand A-Grade">A</span>
+        </div>
+        <div class="info-box" style="margin-top:1rem;">
+          <p style="font-size:0.8rem;" data-de="Foto: Unsplash-Lizenz (kostenlos, kommerzielle Nutzung erlaubt). Quelle: unsplash.com" data-en="Photo: Unsplash licence (free, commercial use permitted). Source: unsplash.com">
+            Foto: Unsplash-Lizenz · kostenlose kommerzielle Nutzung · unsplash.com
+          </p>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="product-info">
+        <p class="product-brand-label">TaylorMade</p>
+        <h1 class="product-title">P790 Eisensatz</h1>
+
+        <div class="product-price">
+          € 649 <span data-de="inkl. MwSt." data-en="incl. VAT">inkl. MwSt.</span>
+        </div>
+
+        <table class="specs-table" aria-label="Produktspezifikationen">
+          <tbody>
+            <tr><td data-de="Schläger" data-en="Clubs">Schläger</td><td>5 – PW (6 Stück)</td></tr>
+            <tr><td data-de="Schaft" data-en="Shaft">Schaft</td><td>KBS Tour 90</td></tr>
+            <tr><td data-de="Flex" data-en="Flex">Flex</td><td>Regular</td></tr>
+            <tr><td data-de="Länge" data-en="Length">Länge</td><td>Standard</td></tr>
+            <tr><td data-de="Griff" data-en="Grip">Griff</td><td>Golf Pride Tour Velvet (neu)</td></tr>
+            <tr><td data-de="Jahrgang" data-en="Year">Jahrgang</td><td>2021</td></tr>
+            <tr><td data-de="Zustand" data-en="Condition">Zustand</td><td><strong data-de="A-Grade – wie neu" data-en="A-Grade – like new">A-Grade – wie neu</strong></td></tr>
+            <tr><td data-de="Versand" data-en="Shipping">Versand</td><td data-de="Österreich & EU" data-en="Austria & EU">Österreich & EU</td></tr>
+          </tbody>
+        </table>
+
+        <div class="condition-note" role="note">
+          <strong data-de="A-Grade:" data-en="A-Grade:">A-Grade:</strong>
+          <span data-de=" Maximal 1–2 Runden gespielt. Keine sichtbaren Gebrauchsspuren am Face oder Schaft. Griffe wurden erneuert." data-en=" Maximum 1–2 rounds played. No visible marks on face or shaft. Grips have been replaced.">
+            Maximal 1–2 Runden gespielt. Keine sichtbaren Gebrauchsspuren. Griffe erneuert.
+          </span>
+        </div>
+
+        <div class="cta-group">
+          <a href="contact.html" class="btn btn-primary" data-de="Jetzt kaufen – Anfrage senden" data-en="Buy now – send enquiry">
+            Jetzt kaufen – Anfrage senden
+          </a>
+          <a href="index.html" class="btn btn-ghost" data-de="Weitere Angebote ansehen" data-en="View more listings">
+            Weitere Angebote ansehen
+          </a>
+        </div>
+
+        <p style="font-size:0.775rem;color:var(--text-light);margin-top:1rem;line-height:1.6;" data-de="Differenzbesteuerung gem. § 24 UStG – kein gesonderter Umsatzsteuerausweis möglich. 14 Tage Rückgaberecht gem. § 11 FAGG." data-en="Margin scheme per § 24 UStG – no separate VAT breakdown possible. 14-day right of return pursuant to § 11 FAGG.">
+          Differenzbesteuerung gem. § 24 UStG. 14 Tage Rückgaberecht gem. § 11 FAGG.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">FV</span>
+        <p>Premium Used Golf Equipment</p>
+        <p class="footer-copy">© 2025 FairwayVault – Julian Binderberger e.U.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer-Navigation">
+        <ul>
+          <li><a href="about.html" data-de="Über uns" data-en="About us">Über uns</a></li>
+          <li><a href="license.html" data-de="AGB & Lizenz" data-en="T&C & License">AGB & Lizenz</a></li>
+          <li><a href="privacy.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+          <li><a href="accessibility.html" data-de="Barrierefreiheit" data-en="Accessibility">Barrierefreiheit</a></li>
+          <li><a href="contact.html" data-de="Impressum & Kontakt" data-en="Imprint & Contact">Impressum & Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-legal">
+        <p>Alle Preise inkl. MwSt. zzgl. Versand. Differenzbesteuerung gem. § 24 UStG.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
